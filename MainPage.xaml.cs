@@ -5,6 +5,8 @@ namespace DAM_Leccion_01
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        //Aqui se declara gloabal, en este caso una propieda del persona model
+        private PersonaModel personaModel { get; set; }
 
         public MainPage()
         {
@@ -25,34 +27,30 @@ namespace DAM_Leccion_01
         }
 
         public void Ejecutar() {
-            //Binding en el backed
             //PersonaModel personaModel = new PersonaModel();
             //personaModel.Nombre = "Holaa";
             //txtNombre.Text = personaModel.Nombre;
 
 
-            PersonaModel personaModel = new PersonaModel()
+            personaModel = new PersonaModel()
             {
                 Nombre = "Jonathan Romero M",
             };
 
-            //Esto es lo de la practica_05 (BindingContext)
-            BindingContext = personaModel.Nombre;
+            BindingContext = personaModel;
 
-            txtNombre.Text = personaModel.Nombre;
-            Binding personaBinding = new Binding();
+            //txtNombre.Text = personaModel.Nombre;
+            //Binding personaBinding = new Binding();
 
-            personaBinding.Source = personaModel; //Origen
-            personaBinding.Path = "Nombre"; //Ruta
-            txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
+            //personaBinding.Source = personaModel; //Origen
+            //personaBinding.Path = "Nombre"; //Ruta
+            //txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
 
         }
 
-
-        private void Aceptar_Clicked(object sender, EventArgs e)
+        private void Acept_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Asistente del sistema","Se ha guardado el registro en la bd","Aceptar");
-
+            personaModel.Nombre = "Lesly de Romero";
         }
     }
 

@@ -44,11 +44,13 @@
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Escibe tu nombre" />
 
-            <Button
-                x:Name="Aceptar"
-                Clicked="Aceptar_Clicked"
+            <Button 
+                x:Name="Acept"
+                Clicked="Acept_Clicked"
                 HorizontalOptions="CenterAndExpand"
-                Text="Aceptar" />
+                Text="Aceptar"
+                />
+                
 
         </VerticalStackLayout>
     </ScrollView>

@@ -6,7 +6,7 @@ public partial class PersonasView : ContentPage
 {
 	public PersonasView()
 	{
-		InitializeComponent();
+		//InitializeComponent();
 		BindingContext = new PersonasViewModel();
 	}
 }

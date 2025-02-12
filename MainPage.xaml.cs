@@ -1,4 +1,5 @@
 ﻿using DAM_Leccion_01.Model;
+using DAM_Leccion_01.ViewModel;
 
 namespace DAM_Leccion_01
 {
@@ -6,54 +7,18 @@ namespace DAM_Leccion_01
     {
         int count = 0;
         //Aqui se declara gloabal, en este caso una propieda del persona model
-        private PersonaModel personaModel { get; set; }
+
+        MainPageViewModel mainPageViewModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
-            Ejecutar();
+            BindingContext = mainPageViewModel;
         }
 
-        //private void OnCounterClicked(object sender, EventArgs e)
-        //{
-        //    count++;
-
-        //    if (count == 1)
-        //        CounterBtn.Text = $"Clicked {count} time";
-        //    else
-        //        CounterBtn.Text = $"Clicked {count} times";
-
-        //    SemanticScreenReader.Announce(CounterBtn.Text);
-        //}
-
-        public void Ejecutar() {
-            //PersonaModel personaModel = new PersonaModel();
-            //personaModel.Nombre = "Holaa";
-            //txtNombre.Text = personaModel.Nombre;
-
-
-            personaModel = new PersonaModel()
-            {
-                Nombre = "Jonathan Romero M",
-            };
-
-            BindingContext = personaModel;
-
-            //txtNombre.Text = personaModel.Nombre;
-            //Binding personaBinding = new Binding();
-
-            //personaBinding.Source = personaModel; //Origen
-            //personaBinding.Path = "Nombre"; //Ruta
-            //txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
-
-        }
-
-        private void Acept_Clicked(object sender, EventArgs e)
-        {
-            personaModel.Nombre = "Jonathan";
-            personaModel.Apellido = "Romero Molina";
-            personaModel.Edad = "21";
+        private void Acept_Clicked(object sender, EventArgs e){
+        
         }
     }
-
+        //View tiene que ser plantillas MAUI cuando hablamos de la vista
 }

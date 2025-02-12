@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAM_Leccion_01.Model
 {
-    internal class PersonaModel :INotifyPropertyChanged
+    public class PersonasModel :INotifyPropertyChanged
     {
         //Atributos
         private string? nombre;
@@ -40,6 +40,7 @@ namespace DAM_Leccion_01.Model
                 OnPropertyChanged();
             } 
         }
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

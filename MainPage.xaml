@@ -6,10 +6,10 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Leccion2:PersonaModel x:Key="persona" Nombre="Jonathan" />
+            <Leccion2:PersonasModel x:Key="persona" Nombre="Jonathan" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
@@ -34,19 +34,19 @@
 
             <Entry
                 x:Name="txtNombre"
-                Text="{Binding Nombre}"
+                Text="{Binding personasModel.Nombre}"
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Introduce tu nombre" />
-            
+
             <Entry
                 x:Name="txtApellido"
-                Text="{Binding Apellido}"
+                Text="{Binding personasModel.Apellido}"
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Introduce tu apellido" />
-            
+
             <Entry
                 x:Name="txtEdad"
-                Text="{Binding Edad}"
+                Text="{Binding personasModel.Edad}"
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Introduce tu edad" />
 
@@ -54,11 +54,8 @@
                 x:Name="Acept"
                 Clicked="Acept_Clicked"
                 HorizontalOptions="CenterAndExpand"
-                Text="Aceptar"
-                />
-                
+                Text="Aceptar" />
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

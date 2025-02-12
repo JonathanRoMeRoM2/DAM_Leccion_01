@@ -7,7 +7,8 @@ namespace DAM_Leccion_01
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new PersonasView();
         }
 
         //protected override Window CreateWindow(IActivationState? activationState)

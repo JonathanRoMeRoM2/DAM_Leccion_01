@@ -5,13 +5,13 @@
              Title="Modos">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Interfaz MODOS"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
         <Entry 
             x:Name="txt1" 
-            Placeholder="texto 1" 
+            Placeholder="Texto 1" 
             Text="Hola MAUI" />
 
         <Entry 

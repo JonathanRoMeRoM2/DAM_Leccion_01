@@ -14,17 +14,17 @@ namespace DAM_Leccion_01
             Ejecutar();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
+        //private void OnCounterClicked(object sender, EventArgs e)
+        //{
+        //    count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        //    if (count == 1)
+        //        CounterBtn.Text = $"Clicked {count} time";
+        //    else
+        //        CounterBtn.Text = $"Clicked {count} times";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+        //    SemanticScreenReader.Announce(CounterBtn.Text);
+        //}
 
         public void Ejecutar() {
             //PersonaModel personaModel = new PersonaModel();
@@ -50,7 +50,9 @@ namespace DAM_Leccion_01
 
         private void Acept_Clicked(object sender, EventArgs e)
         {
-            personaModel.Nombre = "Lesly de Romero";
+            personaModel.Nombre = "Jonathan";
+            personaModel.Apellido = "Romero Molina";
+            personaModel.Edad = "21";
         }
     }
 

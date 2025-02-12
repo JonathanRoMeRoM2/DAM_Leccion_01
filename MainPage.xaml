@@ -21,28 +21,34 @@
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
             <Label
-                Text="Hola Mundo, soy Yoooo!"
+                Text="Inicio de Sesión"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
-                Text="Bienvenido, soy Jonathan"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
-            <Button
+            <!--<Button
                 x:Name="CounterBtn"
                 Text="Dale Click" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" />-->
 
             <Entry
                 x:Name="txtNombre"
                 Text="{Binding Nombre}"
                 HorizontalOptions="FillAndExpand"
-                Placeholder="Escibe tu nombre" />
+                Placeholder="Introduce tu nombre" />
+            
+            <Entry
+                x:Name="txtApellido"
+                Text="{Binding Apellido}"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Introduce tu apellido" />
+            
+            <Entry
+                x:Name="txtEdad"
+                Text="{Binding Edad}"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Introduce tu edad" />
 
             <Button 
                 x:Name="Acept"
